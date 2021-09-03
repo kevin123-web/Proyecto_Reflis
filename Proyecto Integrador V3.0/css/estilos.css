@@ -1,0 +1,663 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+:root{
+    --gold1:#F4BD76;
+    --gold2:#F6CD8F;
+    --gray:#ffffff80;
+    --gray2:#f7d9d990;
+    --black1:#1A1B1F;
+    --black2:#30353B;
+    --shadow:0 8px 8px;
+    --color_shadow:#00000033;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: Roboto;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 50px 0;
+
+}
+.container--modifier{
+    width: 60%;
+}
+.header{
+    background:linear-gradient(180deg,var(--black2) 0%, #1A1B1F 100%);
+    width: 100%;
+    
+    min-height: 100vh;
+}
+.copy-title{
+    font-size: 2.2em;
+    margin-bottom: 0;
+}
+.copy-subtitle{
+    margin-top: 4px;
+    font-size: 1.2em;
+    color: var(--black2);
+}
+.nav-hero{
+    color: white;
+    height: 70px;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+
+}
+.nav--container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    height: inherit;
+}
+.logo__name{
+    font-size: 1.7em;
+    font-weight: 400;
+}
+.logo__name span{
+    color: var(--gold1);
+    font-weight: 500;
+}
+.link{
+    color:white;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 300;
+    padding-left: 20px;
+    transition: color .5s;
+}
+.link:hover{
+    color: var(--gold1);
+}
+.link--active{
+    color: var(--gold1);
+    font-weight: 600;
+}
+/*banner*/
+.hero-main{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 600px;
+    cursor: default;
+}
+.hero-main__content{
+    width: 40%;
+    color: white;
+    text-align: left;
+}
+.hero-main__title{
+    font-size: 3.5em;
+    margin-top: 0;
+}
+.hero-main__img{
+    width: 48%;
+    height: 450px;
+    border-radius: 30px;
+    border: 4px solid rgba(255, 255, 255, 0.979);
+
+}
+.title__active{
+    color: var(--gold1);
+    transition: text-shadow 0.5s;
+}
+.hero-main__txt{
+    font-size: 1.3em;
+    font-weight:400;
+    padding: 0 0px;
+    color: rgb(163, 161, 161);
+}
+.hero-main__link{
+    display: inline-block;
+    color: var(--black1);
+    text-decoration: none;
+    padding: 20px 25px;
+    font-size: 1.2em;
+    font-weight: 400;
+    background-color: var(--gold1);
+    margin:20px auto;
+    transition: all .5s;
+    border-radius: 5px;
+    margin-bottom: 0;
+}
+.hero-main__link:hover{
+    color: var(--gold2);
+    background-color: var(--black1);
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-height: 533px;
+}
+.card{
+    background:linear-gradient(180deg,var(--black2) 0%, #1A1B1F 100%);
+    width: 32%;
+    height: max-content;
+    padding:30px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card__img{
+    height: 230px;
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+    margin-bottom: 20px;
+}
+.card__subtitle{
+    color: var(--gold2);
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.point{
+    color: var(--gold2);
+}
+.card__title{
+    font-size: 2em;
+    color: white;
+    margin: 0px auto 10px;
+}
+.card__txt{
+    text-align: justify;
+    color: rgb(163, 161, 161);
+}
+.card__link{
+    display: block;
+    color: var(--black1);
+    background-color: var(--gold2);
+    text-decoration: none;
+    padding: 15px 23px;
+    width: max-content;
+    text-align: center;
+    margin: auto;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: all .5s;
+}
+.card__link:hover{
+    background-color: var(--black1);
+    color: var(--gold1);
+}
+.projects__cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.card__date{
+    color: var(--gold1);
+    font-weight: 600;
+}
+.projects__background{
+    position: relative;
+    height: 250px;
+    width: 66%;
+}
+
+.background__content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    color: white;
+    padding: 20px;
+}
+.projects__img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    position: relative;
+}
+.projects__background:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.287);
+    border-radius: 10px;
+}
+.cards--project{
+    margin: 0;
+    margin-bottom: 15px;
+    height: 250px;  
+    position: relative;
+}
+.background__txt{
+    margin-bottom: 0;
+}
+
+.clients__cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+}
+.clients__content{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background:linear-gradient(180deg,var(--black2) 0%, #1A1B1F 100%);
+    width: 80%;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 7px;
+
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+.clients__content2{
+    background: none;
+}
+.clients__content i[class*="fa-"]{
+    color:white;
+    font-size: 30px;
+    padding-right: 20px;
+    
+}
+.card__name{
+    margin: 0 auto;
+    font-weight: 600;
+}
+.card__position{
+    margin: 0 auto;
+    font-weight: 300;
+
+}
+.card__face{
+    position: relative;
+    height: 400px;
+    width: 26%;
+}
+.clients__img{
+    height: 100%;
+    border-radius: 7px;
+
+}
+.card__bg{
+    background:linear-gradient(180deg,var(--black2) 0%, #1A1B1F 100%);
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    border-radius: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.fa-google-pay{
+    font-size: 100px;
+    color: white;
+}
+.card__img-round{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 14px;
+}
+.email {
+    text-align: center;
+}
+.email__projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 70px auto;
+}
+.project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: left;
+    border-right: 2px solid var(--black1);
+    padding: 0 20px;
+}
+.fa-check-circle{
+    font-size: 40px;
+    padding: 0 10px;
+}
+.project__number{
+    font-weight: 700;
+}
+.project__txt{
+    margin: 0;
+}
+.email__form input[type="submit"]{
+    background: var(--black1);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 7px;
+    border: none;
+    font-weight: 700;
+}
+.email__form input[type="submit"]:hover{
+    background: var(--gold1);
+    color: var(--black1);
+}
+.email__form input[type="email"]{
+    font-size: 1em;
+    border: none;
+    font-weight: 600;
+    width: max-content;
+    outline: 0;
+}
+
+.email__form{
+    border: 1px solid rgba(0, 0, 0, 0.459);
+    border-radius: 7px;
+    width: max-content;
+    padding: 7px 7px;
+    margin: auto;
+}
+.form--2{
+    margin: 0;
+}
+.footer{
+    margin: 100px auto;
+}
+.footer__extra{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.extra__card{
+    width: 50%;
+}
+.extra__link{
+    border: 1px solid rgba(0, 0, 0, 0.459);
+    border-radius: 7px;
+    width: max-content;
+    padding: 7px 7px;
+    margin: 0 0;
+    
+}
+.extra__socials{
+    font-weight: 700;
+    color: var(--black2);
+    text-align: justify;
+}
+.extra__socials a{
+    text-decoration: none;
+    color: var(--black2);
+    margin: 0 60px 0 10px;
+}
+.extra__link{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    padding: 20px 30px;
+    margin: 10px 0;
+    margin-right: 4px;
+}
+.copy{
+    font-weight: 400;
+    margin: 5px auto;
+}
+.footer__contacts{
+    background:linear-gradient(180deg,var(--black2) 0%, #1A1B1F 100%);
+    height: 175px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contact{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    transition: all .7s;
+}
+.contact i{
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+.contact:hover{
+    background:linear-gradient(180deg,var(--gold1) 0%, var(--gold2) 100%);
+    color: var(--black1);
+}
+.contact--active{
+    background:linear-gradient(180deg,var(--gold1) 0%, var(--gold2) 100%);
+    color: var(--black1);
+}
+@media screen and (max-width:820px){
+    .container--modifier{
+        width: 90%;
+    }
+    .nav-hero{
+        height: 100px;
+    }
+    .logo{
+        width: 100%;
+    }
+    .link {
+        padding: 0;
+        margin-right: 10px;
+    }
+    .links{
+        width: 100%;
+    }
+    .logo__name{
+        font-size: 1.2em;
+    }
+    .link{
+        font-size: 0.9em;
+    }
+    .hero-main__title{
+        font-size: 2em;
+    }
+    .hero-main__txt{
+        font-size: 1.1em;
+    }
+    .hero-main__link{
+        font-size: 1em;
+        padding: 14px;
+    }
+    .hero-main__img{
+        height: 300px;
+    }
+    .cards{
+        height: max-content;
+        max-height: none;
+    }
+    .card{
+        width: 90%;
+        margin: auto;
+
+    }
+    .card__img{
+        display:block;
+        width: 70%;
+        height: 200px;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+    .card__subtitle{
+        display: inline-block;
+    }
+    .card{
+        margin: 20px auto;
+    }
+    .projects__background{
+        width: 90%;
+        margin: auto;
+    }
+    .card__face{
+        width: 90%;
+        margin:20px auto;
+    }
+    .clients__content2{
+        width: max-content;
+    }
+    .project{
+        margin-bottom: 15px;
+    }
+    .email__form input[type="submit"]{
+        padding: 10px 15px;
+        border-radius: 7px;
+        border: none;
+        font-weight: 700;
+    }
+    .email__form input[type="email"]{
+        font-size: 1em;
+        border: none;
+        font-weight: 600;
+        width: 150px;
+    }
+    .project{padding-left: 0;}
+    .extra__card{
+        width: 100%;
+        margin: auto;
+    }
+    .extra__links{
+        width: max-content;
+        margin: auto;
+    }
+    .copy{
+        text-align: center;
+    }
+    .form--2{
+        margin: auto;
+    }
+    .extra__socials a{
+        margin-right: 10px;
+    }
+    .extra__socials{
+        text-align: center;
+    }
+    .footer__contacts{
+        height: 125px;
+    }
+    .contact{
+        font-size: 0.7em;
+    }
+}
+@media screen and (max-width:392px){
+    .copy-title{
+        font-size: 1.2em;
+    }
+    .copy-subtitle{
+        font-size: 0.9em;
+    }
+    .hero-main__content{
+        width: 100%;
+    }
+    .container {
+        padding: 0px 0;
+    }
+    .hero-main__img{
+        width: 100%;
+        height: 200px;
+    }
+    .hero-main{
+        flex-direction: column;
+        justify-content: left;
+        align-items: center;
+    }
+    .hero-main__content{
+        padding: 20px 0;
+    }
+    .card{
+        width: 100%;
+        padding: 10px;
+    }
+    .card__img{
+        width: 100%;
+        height: 150px;
+    }
+    .projects__background{
+        width: 100%;
+    }
+    .clients__content{
+        width: 95%;
+    }
+    .card__name{
+    font-size: 1.2em;
+    text-align: center;
+    }
+    .card__position{
+        text-align: center;
+    }
+    .clients__content i[class*="fa-"]{
+        color:white;
+        font-size: 30px;
+        padding-right: 0px;
+        margin: auto;
+        
+    }
+    .fa-google-pay{
+        font-size: 50px;
+    }
+    .card__txt{
+        padding-top: 0;
+    }
+    .clients__content2{
+        display: block;
+        margin-top: 10px;
+    }
+    .card__face{
+        height: 420px;
+    }
+    .card__img-round{
+        display: block;
+        margin: 10px auto;
+    }
+    .email__form input[type="email"]{
+        font-size: 0.8em;
+        font-weight: 400;
+        width: 120px;
+    }
+    .email__form{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .extra__link{
+        padding:10px 15px;
+    }
+    .copy{
+        font-size: 0.9em;
+    }
+    .contact{
+        width: 50%;
+        height: max-content;
+        padding:20px 0;
+        background: rgb(42, 42, 42);
+    }
+    .contact--active{
+        color: black;
+        background-color: var(--gold1);
+    }
+}
